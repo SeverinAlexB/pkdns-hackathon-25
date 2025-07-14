@@ -3,6 +3,8 @@
 //! This example shows how to publish a pkarr packet to the network.
 //! It generates a new key pair and publishes a packet with an A record.
 //! It then retrieves the packet and prints the answers.
+//! 
+//! Important: The packet needs to be republished every 1 hour to keep it alive.
 //!
 //! Run with:
 //!

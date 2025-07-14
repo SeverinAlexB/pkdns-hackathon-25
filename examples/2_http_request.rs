@@ -17,8 +17,6 @@ use std::{error::Error, net::{Ipv4Addr, SocketAddr}};
 async fn publish_packet(client: &Client, server_port: u16) -> Result<PublicKey, Box<dyn Error>> {
     let keypair = Keypair::random();
 
-    let target_ip = Ipv4Addr::new(127, 0, 0, 1);
-
     // The reqwest client only supports SVCB records for now
     let mut svcb = SVCB::new(0, ".".try_into().unwrap());
     svcb.set_port(server_port);
@@ -26,7 +24,7 @@ async fn publish_packet(client: &Client, server_port: u16) -> Result<PublicKey, 
         .https(".".try_into().unwrap(), svcb, 300)
         .address(
             ".".try_into().unwrap(),
-            std::net::IpAddr::V4(target_ip),
+            std::net::IpAddr::V4(Ipv4Addr::new(127, 0, 0, 1)),
             300,
         )
         .sign(&keypair)?;
