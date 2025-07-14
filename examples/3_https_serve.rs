@@ -10,7 +10,7 @@
 //! cargo run --example 3_https_serve
 //! ```
 //! 
-//! Important: RFC7250 HTTPS is not yet supported by browsers.
+//! Important: RFC7250 HTTPS is not yet supported by browsers. Pkarr can guarantee browser compatibility with a ICANN fallback though.
 
 use axum::{Router, routing::get};
 use axum_server::tls_rustls::RustlsConfig;
@@ -19,7 +19,6 @@ use std::{error::Error, net::{Ipv4Addr, SocketAddr}, sync::Arc};
 
 /// Publish the packet to the network
 async fn publish_packet(client: &Client, server_port: u16, keypair: &Keypair) -> Result<PublicKey, Box<dyn Error>> {
-
     let target_ip = Ipv4Addr::new(127, 0, 0, 1);
 
     // The reqwest client only supports SVCB records for now
@@ -42,7 +41,7 @@ async fn publish_packet(client: &Client, server_port: u16, keypair: &Keypair) ->
 async fn start_server(keypair: &Keypair) -> Result<SocketAddr, Box<dyn Error>> {
     let app = Router::new().route("/", get(|| async { "Hello world" }));
 
-    let addr = "0.0.0.0:55632".parse::<SocketAddr>().unwrap();
+    let addr = "127.0.0.1:55632".parse::<SocketAddr>().unwrap();
 
     let server = axum_server::bind_rustls(
         addr,
@@ -67,13 +66,14 @@ async fn main() -> Result<(), Box<dyn Error>> {
     let pkarr_client = Client::builder().build()?;
     let public_key = publish_packet(&pkarr_client, socket_addr.port(), &keypair).await?;
     println!("Published packet: {}", public_key);
+    println!();
 
     // HTTPS call to the server
     let http_client = reqwest::ClientBuilder::from(pkarr_client).build()?;
     let url = format!("https://{}/", public_key);
     println!("Requesting URL: {}", url);
     let response = http_client.get(url).send().await?;
-    println!();
+
     println!("Response HTTPS");
     println!("Status {:?}", response.status());
     println!("Body: {}", response.text().await?);
