@@ -2,6 +2,14 @@
     "name": "pkarr-nodejs-test",
     "main": "index.js",
     "scripts": {
-      "start": "node index.js"
+        "start": "npm run build && node dist/index.js",
+        "build": "tsc"
+    },
+    "dependencies": {
+        "@synonymdev/pkarr": "^0.1.0-rc.2"
+    },
+    "devDependencies": {
+        "@types/node": "^24.0.15",
+        "typescript": "^5.8.3"
     }
-  }
+}
