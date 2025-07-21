@@ -22,6 +22,14 @@ Think of it like a TOR onion address but with full internet speed.
 
 ## Rust Examples
 
+> Rust toolchain required. Install [here](https://www.rust-lang.org/tools/install).
+
 - [1_publish_dns_zone](./examples/1_publish_dns_zone.rs) Publish your own Public Key Domain.
 - [2_http_request](./examples/2_http_request.rs) Make a HTTP request to a PKD.
 - [3_https_serve](./examples/3_https_serve.rs) Create a server protected by HTTPS without a Certificate Authority.
+
+## JS/TS Examples
+
+- [publish and resolve](./nodejs/) Simple publish and resolve.
+
+http request & https serve is currently not available (TBD).
