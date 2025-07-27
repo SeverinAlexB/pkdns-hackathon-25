@@ -1,3 +1,9 @@
+/**
+ * Publish a DNS zone.
+ * 
+ * npm run start --file=1_publish_dns_zone
+ */
+
 import { Client, SignedPacket, Keypair } from '@synonymdev/pkarr';
 
 async function main() {
@@ -7,8 +13,12 @@ async function main() {
     
     // Publish a packet
     const builder = SignedPacket.builder();
-    builder.addSvcbRecord(".", 1, "127.0.0.1", 300);
+    console.log("Adding SVCB record");
+    builder.addSvcbRecord(".", 0, ".", 300);
+    builder.addARecord(".", "127.0.0.1", 300);
+    console.log("Building packet");
     const packet = builder.buildAndSign(keypair);
+    console.log("Publishing packet");
     await client.publish(packet);  
     console.log("Published packet!");
     
@@ -26,4 +36,8 @@ async function main() {
     }
 };
 
-main();
+try {
+    main();
+} catch (error) {
+    console.error(error);
+}

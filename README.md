@@ -1,5 +1,7 @@
 # PKDNS/PKARR Lugano Hackathon 2025
 
+> Pubky Tech Preview
+
 Public Key Domains (PKD) provide self-sovereign and censorship-resistant domain names. It resolves records hosted on the Mainline DHT, the biggest DHT on the planet with ~10M nodes that services torrents since 15 years.
 
 [pkarr](https://github.com/pubky/pkarr/) is a mainline DHT IO library that stores and reads DNS zones. Create your own public key domain DNS records. See [web demo](https://pkdns.net/).

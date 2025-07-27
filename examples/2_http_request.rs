@@ -21,7 +21,7 @@ async fn publish_packet(client: &Client, server_port: u16) -> Result<PublicKey, 
     let mut svcb = SVCB::new(0, ".".try_into().unwrap());
     svcb.set_port(server_port);
     let signed_packet = SignedPacket::builder()
-        .https(".".try_into().unwrap(), svcb, 300)
+        .https("".try_into().unwrap(), svcb, 300)
         .address(
             ".".try_into().unwrap(),
             std::net::IpAddr::V4(Ipv4Addr::new(127, 0, 0, 1)),
