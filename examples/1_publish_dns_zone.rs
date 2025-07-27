@@ -26,6 +26,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
 
     let packet = SignedPacket::builder()
         .a(Name::new(".")?, Ipv4Addr::new(127, 0, 0, 1), 300)
+        .txt(Name::new(".")?, "Hello, world!".try_into()?, 300)
         .build(&keypair)?;
 
     // Publish the packet

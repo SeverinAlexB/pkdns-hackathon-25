@@ -1,5 +1,5 @@
 /**
- * Save and load a keypair to a file in the standard hex format.
+ * Generate, save, and load a keypair to a file in the standard hex format.
  * 
  * npm run start --file=2_save_and_load_key
  */
@@ -7,7 +7,7 @@
 import { Keypair } from '@synonymdev/pkarr';
 import * as fs from 'fs';
 
-const KEY_FILE = "key.json";
+const KEY_FILE = "secret.hex";
 
 
 /**

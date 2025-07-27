@@ -6,7 +6,7 @@ Public Key Domains (PKD) provide self-sovereign and censorship-resistant domain 
 
 [pkarr](https://github.com/pubky/pkarr/) is a mainline DHT IO library that stores and reads DNS zones. Create your own public key domain DNS records. See [web demo](https://pkdns.net/).
 
-[pkdns](https://github.com/pubky/pkdns/) is a DNS server that supports Public Key Domains. Add it to your browser (DNS-over-HTTPS) or run it locally and browse domains like [http://7fmjpcuuzf54hw18bsgi3zihzyh4awseeuq5tmojefaezjbd64cy./](http://7fmjpcuuzf54hw18bsgi3zihzyh4awseeuq5tmojefaezjbd64cy./).
+[pkdns](https://github.com/pubky/pkdns/) is a DNS server that supports Public Key Domains. Add it to your browser (DNS-over-HTTPS) or run it locally. Browse domains like [http://7fmjpcuuzf54hw18bsgi3zihzyh4awseeuq5tmojefaezjbd64cy./](http://7fmjpcuuzf54hw18bsgi3zihzyh4awseeuq5tmojefaezjbd64cy./).
 
 
 ## Why Public Key Domains?
@@ -17,7 +17,7 @@ Think of it like a TOR onion address but with full internet speed.
 - Censorship-resistant - Nobody can block the 10M Mainline DHT nodes.
 - Free - No need to purchase a domain.
 - No need to dox your contact address like with regular domains.
-- TLS certificates without a Certificate Authority.
+- TLS certificates without a Certificate Authority (rust only).
 - In the future: Key delegation.
 
 
@@ -32,6 +32,7 @@ Think of it like a TOR onion address but with full internet speed.
 
 ## JS/TS Examples
 
-- [publish and resolve](./nodejs/) Simple publish and resolve.
+- [1_publish_dns_zone](./nodejs/1_publish_dns_zone.ts) Simple publish and resolve.
+- [2_save_and_load_key](./nodejs/2_save_and_load_key.ts) Save the key and load it again.
 
-http request & https serve is currently not available (TBD).
+http request & https serve is only available in Rust.
