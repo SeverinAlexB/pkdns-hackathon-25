@@ -2,7 +2,7 @@
 
 > Pubky Tech Preview
 
-Public Key Domains (PKD) provide self-sovereign and censorship-resistant domain names. It resolves records hosted on the Mainline DHT, the biggest DHT on the planet with ~10M nodes that services torrents since 15 years.
+Public Key Domains (PKD) provide self-sovereign and censorship-resistant domain names. They resolve records hosted on the Mainline DHT, the biggest DHT on the planet with ~10M nodes that have been servicing torrents for 15 years.
 
 [pkarr](https://github.com/pubky/pkarr/) is a mainline DHT IO library that stores and reads DNS zones. Create your own public key domain DNS records.
 
@@ -13,11 +13,11 @@ Public Key Domains (PKD) provide self-sovereign and censorship-resistant domain 
 
 Think of it like a TOR onion address but with full internet speed.
 
-- Domains independent of a central authority like ICANN.
+- Domains are independent of a central authority like ICANN.
 - Censorship-resistant - Nobody can block the 10M Mainline DHT nodes.
 - Free - No need to purchase a domain.
 - No need to dox your contact address like with regular domains.
-- TLS certificates without a Certificate Authority (rust only).
+- TLS certificates without a Certificate Authority (Rust only).
 - In the future: Key delegation.
 
 
@@ -27,7 +27,7 @@ Think of it like a TOR onion address but with full internet speed.
 > Rust toolchain required. Install [here](https://www.rust-lang.org/tools/install).
 
 - [1_publish_dns_zone](./examples/1_publish_dns_zone.rs) Publish your own Public Key Domain.
-- [2_http_request](./examples/2_http_request.rs) Make a HTTP request to a PKD.
+- [2_http_request](./examples/2_http_request.rs) Make an HTTP request to a PKD.
 - [3_https_serve](./examples/3_https_serve.rs) Create a server protected by HTTPS without a Certificate Authority.
 
 ## JS/TS Examples
@@ -35,13 +35,13 @@ Think of it like a TOR onion address but with full internet speed.
 - [1_publish_dns_zone](./nodejs/1_publish_dns_zone.ts) Simple publish and resolve.
 - [2_save_and_load_key](./nodejs/2_save_and_load_key.ts) Save the key and load it again.
 
-http request & https serve is only available in Rust.
+HTTP request & HTTPS serve are only available in Rust.
 
 ## PKDNS DIG (Records Viewer)
 
-https://pkdns.net/ provides a convinient dns zone viewer to verify what you published.
+https://pkdns.net/ provides a convenient DNS zone viewer to verify what you published.
 
 Examples:
 - [Demo Site](https://pkdns.net/?id=7fmjpcuuzf54hw18bsgi3zihzyh4awseeuq5tmojefaezjbd64cy) 7fmjpcuuzf54hw18bsgi3zihzyh4awseeuq5tmojefaezjbd64cy
 - [Pubky Homeserver](https://pkdns.net/?id=8um71us3fyw6h8wbcxb5ar3rwusy1a6u49956ikzojg3gcwd1dty) 8um71us3fyw6h8wbcxb5ar3rwusy1a6u49956ikzojg3gcwd1dty
-- [Severins Pubky Account](https://pkdns.net/?id=ihgjy51fdnaingcp8rum1omfzd6p8bhm7usune41grd97dho5cwy) ihgjy51fdnaingcp8rum1omfzd6p8bhm7usune41grd97dho5cwy
+- [Severin's Pubky Account](https://pkdns.net/?id=ihgjy51fdnaingcp8rum1omfzd6p8bhm7usune41grd97dho5cwy) ihgjy51fdnaingcp8rum1omfzd6p8bhm7usune41grd97dho5cwy
