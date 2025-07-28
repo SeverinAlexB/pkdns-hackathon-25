@@ -1,6 +1,6 @@
 # PKARR JS/TS Example
 
-> nodejs toolchain required 
+> nodejs 23 toolchain required. Make sure to update to prevent errors. 
 
 Run with
 

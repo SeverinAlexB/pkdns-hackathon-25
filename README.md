@@ -27,9 +27,9 @@ Think of it like a TOR onion address but with full internet speed.
 
 2. Resolve http://7fmjpcuuzf54hw18bsgi3zihzyh4awseeuq5tmojefaezjbd64cy/ to see if it is working.
 
-3a. Use the [JS examples](./nodejs/) to publish your own DNS records.
+3. Use the [JS examples](./nodejs/) to publish your own DNS records.
 
-3b. Use the [pkdns-cli](https://github.com/pubky/pkdns/tree/master/cli/sample) to publish your own DNS records. Download the binaries [here](https://github.com/pubky/pkdns/releases/).
+3. Use the [pkdns-cli](https://github.com/pubky/pkdns/tree/master/cli/sample) to publish your own DNS records. Download the binaries [here](https://github.com/pubky/pkdns/releases/).
 
 ## PKDNS DIG (Records Viewer)
 
