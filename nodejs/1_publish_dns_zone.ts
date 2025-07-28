@@ -33,6 +33,8 @@ async function main() {
     for (let record of resolved_packet.records) {
         console.log("- Record", record);
     }
+
+    console.log(`Open http://${keypair.public_key_string()}/ to see the result.`);
 };
 
 try {
