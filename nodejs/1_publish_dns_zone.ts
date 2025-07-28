@@ -13,7 +13,8 @@ async function main() {
     
     // Publish a packet
     const builder = SignedPacket.builder();
-    builder.addARecord(".", "127.0.0.1", 300);
+    // IP Address of the demo website
+    builder.addARecord(".", "34.65.109.99", 300);
     console.log("Building packet");
     const packet = builder.buildAndSign(keypair);
     console.log("Publishing packet");

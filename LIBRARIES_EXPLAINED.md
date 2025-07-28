@@ -21,15 +21,21 @@ Think of it like a TOR onion address but with full internet speed.
 - In the future: Key delegation.
 
 
-## Usage
 
-1. Add `https://pkdns.pubky.org/dns-query` as DNS server to your browser. See [guide](https://support.privadovpn.com/kb/article/848-how-to-enable-doh-on-your-browser/).
+## Rust Examples
 
-2. Resolve http://7fmjpcuuzf54hw18bsgi3zihzyh4awseeuq5tmojefaezjbd64cy/ to see if it is working.
+> Rust toolchain required. Install [here](https://www.rust-lang.org/tools/install).
 
-3. Use the [JS examples](./nodejs/) to publish your own DNS records.
+- [1_publish_dns_zone](./examples/1_publish_dns_zone.rs) Publish your own Public Key Domain.
+- [2_http_request](./examples/2_http_request.rs) Make an HTTP request to a PKD.
+- [3_https_serve](./examples/3_https_serve.rs) Create a server protected by HTTPS without a Certificate Authority.
 
+## JS/TS Examples
 
+- [1_publish_dns_zone](./nodejs/1_publish_dns_zone.ts) Simple publish and resolve.
+- [2_save_and_load_key](./nodejs/2_save_and_load_key.ts) Save the key and load it again.
+
+HTTP request & HTTPS serve are only available in Rust.
 
 ## PKDNS DIG (Records Viewer)
 
