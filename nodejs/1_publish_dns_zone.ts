@@ -13,8 +13,6 @@ async function main() {
     
     // Publish a packet
     const builder = SignedPacket.builder();
-    console.log("Adding SVCB record");
-    builder.addSvcbRecord(".", 0, ".", 300);
     builder.addARecord(".", "127.0.0.1", 300);
     console.log("Building packet");
     const packet = builder.buildAndSign(keypair);
