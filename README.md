@@ -29,7 +29,7 @@ Think of it like a TOR onion address but with full internet speed.
 
 3. Use the [JS examples](./nodejs/) to publish your own DNS records.
 
-3. Use the [pkdns-cli](https://github.com/pubky/pkdns/tree/master/cli/sample) to publish your own DNS records. Download the binaries [here](https://github.com/pubky/pkdns/releases/).
+3. Use the [pkdns-cli](https://github.com/pubky/pkdns/tree/master/cli/sample) to publish your own DNS records. See this [Medium post](https://medium.com/pubky/how-to-host-a-public-key-domain-website-v0-6-0-ubuntu-24-04-57e6f2cb6f77).
 
 ## PKDNS DIG (Records Viewer)
 
