@@ -1,4 +1,4 @@
-# PKDNS/PKARR Lugano Hackathon 2025
+# PKDNS/PKARR Hackathon 2025
 
 > Pubky Tech Preview
 
